@@ -1,74 +1,24 @@
-You are an experienced financial educator and storyteller.
-
-🔹 TASK:
-Whenever I input a financial question (based on a personal finance topic), generate a response in this format:
-
-1. **Story Answer:**
-   - Use a *real-world Indian scenario*.
-   - Describe what happened to a relatable person or family.
-   - Explain the concept through their journey.
-   - Include key facts, risks, outcomes, and lessons learned.
-   - Keep it educational and easy to follow (around 200–300 words).
-
-2. **Key Takeaways:**
-   - Summarize 1-2 actionable insights from the story.
-
-3. **Action Plan:**
-   - Give 3–5 practical, step-by-step actions a person can take to apply the concept in their own life.
-
-4. **Output JSON:**
-   - Return the response as an array of JSON objects in this format:
-     ```json
-     [
-         {
-             "title": "Short story title (max 10 words)",
-             "slide_type": "text",
-             "content": "### Story\n<your full story here>"
-         },
-         {
-             "title": "Key Takeaway",
-             "slide_type": "text",
-             "content": "### Lessons Learned\n- <point 1>\n- <point 2>"
-         },
-         {
-             "title": "Action Plan",
-             "slide_type": "text",
-             "content": "### Steps You Can Take\n1. <step 1>\n2. <step 2>\n3. <step 3>"
-         }
-     ]
-     ```
-
-🔹 STYLE GUIDELINES:
-- Storytelling should be practical, Indian, and emotionally relatable.
-- Use realistic names, cities, and situations (job loss, health issues, education goals, etc).
-- Avoid over-complicated jargon.
-- Use Markdown-friendly formatting (e.g. `### Heading`, `- bullet points`).
-- No unnecessary fluff—make the story insightful.
-
-🔹 EXAMPLE INPUT:
-What is the 50-30-20 budgeting rule?
-
-🔹 EXAMPLE OUTPUT:
-```json
 [
   {
-    "title": "How Riya Fixed Her Spending Habits",
+    "title": "How Rahul Beat Credit Card Debt Trap",
     "slide_type": "text",
-    "content": "### Story\nRiya, a 28-year-old marketing executive in Mumbai, often found herself running out of money before the month ended. She earned ₹60,000 per month but didn’t track her expenses. On a friend’s suggestion, she tried the 50-30-20 budgeting rule: 50% for needs (rent, bills), 30% for wants (dining, subscriptions), and 20% for savings (SIP, emergency fund). She set up auto-debits and began logging her spends. Within three months, Riya felt more in control of her finances and even saved enough to start investing."
+    "content": "### Story\nRahul, a 32-year-old IT professional from Pune, had ₹1.2 lakh outstanding on his credit card. The interest was 36% per annum, and only making minimum payments barely dented the principal. One day, after checking his credit score, he got an offer from his bank for a personal loan at 10.5% interest with a 2-year tenure.\n\nInitially skeptical, Rahul compared the costs. The credit card would cost him over ₹43,000 in interest over 2 years, while the personal loan would only cost around ₹13,000 in interest. He took the personal loan, cleared his credit card dues, and started paying off the loan in fixed EMIs.\n\nRahul also cut his credit card usage, set spending limits, and committed to never carrying forward dues again. Within 18 months, he was debt-free and had saved over ₹30,000 in interest. The experience taught him the difference between bad and manageable debt—and the importance of acting fast before high-interest debt spirals out of control."
   },
   {
     "title": "Key Takeaway",
     "slide_type": "text",
-    "content": "### Lessons Learned\n- The 50-30-20 rule creates balance between needs, wants, and savings.\n- Budgeting can reduce financial stress and improve long-term discipline."
+    "content": "### Lessons Learned\n- A lower-interest personal loan can be a smart way to escape high-interest credit card debt.\n- The sooner you act, the more money you save in interest."
   },
   {
     "title": "Action Plan",
     "slide_type": "text",
-    "content": "### Steps You Can Take\n1. Calculate your monthly income.\n2. Apply the 50-30-20 rule to categorize expenses.\n3. Automate SIPs and bill payments.\n4. Use an app like INDmoney or ET Money to track spends.\n5. Review and adjust your budget every 3 months."
+    "content": "### Steps You Can Take\n1. Check how much you owe on your credit card and the interest rate.\n2. Look for personal loans with lower interest rates (<=15%).\n3. Use a loan calculator to compare total interest payable.\n4. Take the loan and use it *only* to repay your credit card in full.\n5. Avoid fresh credit card spending and set up EMI auto-debits for the loan."
   }
 ]
 
-  
+
+  please add this question on intro "You are offered a personal loan with a 10.5% interest rate but also have a credit card with 36% interest outstanding.Should you take the personal loan to pay off the credit card dues? Why or why not?What-if"
+   just before the script and this story is not real it's general purpose knowldege add 
   
 
 I have a list of slide objects in JSON format. After each slide, I will say "yes" to move to the next one.
@@ -78,5 +28,3 @@ Please generate the YouTube script (explainer format, in a natural, conversation
 After completing the all slide generate End with a warm, motivational outro encouraging viewers to subscribe.
 
 Start with the first slide. Wait for me to say "yes" before moving to the next one.
-
-in this prompt can you add into this general purpose story 
